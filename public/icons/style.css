@@ -1,0 +1,137 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?1wj3yi');
+  src: url('fonts/icomoon.eot?1wj3yi#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?1wj3yi') format('truetype'),
+    url('fonts/icomoon.woff?1wj3yi') format('woff'),
+    url('fonts/icomoon.svg?1wj3yi#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: block;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+
+
+.icon-address-card:before {
+  position: absolute;
+  content: "\e900";
+   
+  opacity: 0.4;
+}
+
+.icon-address-card:after {
+  content: "\e901";
+   
+}
+
+.icon-copy:before {
+  position: absolute;
+  content: "\e902";
+   
+  opacity: 0.4;
+}
+
+.icon-copy:after {
+  content: "\e903";
+   
+}
+
+.icon-envelope:before {
+  position: absolute;
+  content: "\e904";
+   
+  opacity: 0.4;
+}
+
+.icon-envelope:after {
+  content: "\e905";
+   
+}
+
+.icon-eye:before {
+  position: absolute;
+  content: "\e906";
+   
+  opacity: 0.4;
+}
+
+.icon-eye:after {
+  content: "\e907";
+   
+}
+
+.icon-file-user:before {
+  position: absolute;
+  content: "\e908";
+   
+  opacity: 0.4;
+}
+
+.icon-file-user:after {
+  content: "\e909";
+   
+}
+
+.icon-folder-open:before {
+  position: absolute;
+  content: "\e90a";
+   
+  opacity: 0.4;
+}
+
+.icon-folder-open:after {
+  content: "\e90b";
+   
+}
+
+.icon-moon-over-sun:before {
+  position: absolute;
+  content: "\e90c";
+   
+  opacity: 0.4;
+}
+
+.icon-moon-over-sun:after {
+  content: "\e90d";
+   
+}
+
+.icon-paper-plane:before {
+  position: absolute;
+  content: "\e90e";
+   
+  opacity: 0.4;
+}
+
+.icon-paper-plane:after {
+  content: "\e90f";
+   
+}
+
+
+.icon-at:before {
+  position: absolute;
+  content: "\e910";
+   
+  opacity: 0.4;
+}
+
+.icon-at:after {
+  content: "\e911";
+   
+}

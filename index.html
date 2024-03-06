@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio de Mariano Frank" />
+    <meta name="keywords" content="Portfolio, Diseño Web, Desarrollador Web" />
+    <meta name="author" content="Frank Mariano" />
+
+    <title>Frank Mariano :D</title>
+
+    <!-- Animate CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Emojis CSS -->
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="public/css/normalize.css" />
+    <link rel="stylesheet" href="public/css/styles.css" />
+    <link rel="stylesheet" href="public/icons/style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body class="animate__animated animate__fadeInDown">
+    <main>
+      <section class="tiny-content presentacion">
+        <div class="mi_foto">
+          <img src="" alt="Frank Mariano Emanuel" />
+        </div>
+        <div class="presentacion_texto">
+          <h1>
+            Hola, soy &nbsp;<span
+              typing-speed="100"
+              typing-delay-write="300"
+              typing-delay-remove="2000"
+              words="Mariano Frank, Full Stack Dev. "
+            ></span>
+          </h1>
+
+          <p>
+            Un desarrollador web full stack y estudiante de ingeniería en
+            sistemas Argentino
+            <i
+              class="em em-flag-ar"
+              aria-role="presentation"
+              aria-label="Argentina Flag"
+            ></i
+            >. Me encanta crear soluciones web, estoy siempre buscando
+            especializarme. Desde el diseño hasta el código, me apasiona cada
+            aspecto del desarrollo web. ¡Vamos a hacer magia en el mundo
+            digital!
+            <i
+              class="em em-sparkles"
+              aria-role="presentation"
+              aria-label="SPARKLES"
+            ></i
+            ><i
+              class="em em-computer"
+              aria-role="presentation"
+              aria-label="PERSONAL COMPUTER"
+            ></i>
+          </p>
+
+          <div class="presentacion_acciones">
+            <div class="btn-ct" data-tippy-content="Dark / Ligth">
+              <button class="btn btn-icon">
+                <i class="icon icon-moon-over-sun"></i>
+              </button>
+              <div class="btn-bg"></div>
+            </div>
+            <div class="btn-ct" data-tippy-content="Descargar 💾">
+              <button class="btn btn-primary">
+                <div class="texto-icono">
+                  Curriculum <i class="icon icon-file-user"></i>
+                </div>
+              </button>
+              <div class="btn-bg"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tiny-content">
+        <h2 class="section_h2">
+          <div class="texto-icono">
+            Projects <i class="icon icon-folder-open primary-dark"></i>
+          </div>
+        </h2>
+
+        <div class="project">
+          <!-- Project -->
+          <div class="project_ilustration">
+            <picture class="project-picture">
+              <source
+                srcset="
+                  /public/images/projects/elegancebones/thumbnail_home.avif
+                "
+                type="image/avif"
+              />
+              <source
+                srcset="
+                  /public/images/projects/elegancebones/thumbnail_home.webp
+                "
+                type="image/webp"
+              />
+              <img
+                class="project-img"
+                src="/public/images/projects/elegancebones/thumbnail_home.png"
+                alt="Elegance Bones"
+              />
+            </picture>
+          </div>
+          <div class="project_content">
+            <h3>Elegance Bones</h3>
+            <p>
+              Tienda virtual de remeras, cuenta con pagos en linea, gestion de
+              envio, cupones de descuento.
+            </p>
+            <div class="tecnologias">
+              <i class="fa-brands fa-js"></i>
+              <i class="fa-brands fa-php"></i>
+              <i class="fa-brands fa-wordpress"></i>
+              <div style="color: #ffac33; font-size: 1.5rem">
+                <i class="fa-solid fa-database"></i> MySQL
+              </div>
+            </div>
+            <div class="btn-ct">
+              <button class="btn" class="">Visitar</button>
+              <div class="btn-bg"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Project -->
+
+        <div class="project">
+          <!-- Project -->
+          <div class="project_ilustration">
+            <picture class="project-picture">
+              <source
+                srcset="/public/images/projects/gym/portada.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="/public/images/projects/gym/portada.webp"
+                type="image/webp"
+              />
+              <img
+                class="project-img"
+                src="/public/images/projects/gym/portada.png"
+                alt="Gym Rat"
+              />
+            </picture>
+          </div>
+          <div class="project_content">
+            <h3>Gym Rat</h3>
+            <p>
+              Pagina de gym con informacion del mismo, entradas de blog con
+              comentarios y seccion de contacto.
+            </p>
+            <div class="tecnologias">
+              <i class="fa-brands fa-js"></i>
+              <i class="fa-brands fa-php"></i>
+              <i class="fa-brands fa-wordpress"></i>
+            </div>
+            <div class="btn-ct">
+              <button class="btn" class="">Visitar</button>
+              <div class="btn-bg"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Project -->
+
+        <div class="projects_secundary">
+          <div class="project">
+            <!-- Project -->
+            <i class="icon icon-eye"></i>
+            <div class="project_content">
+              <h3>Sushi Landing Page</h3>
+              <p>
+                Presentacion de curso de sushi, con testimonios y compra
+                integrada con hotmart.
+              </p>
+              <div class="tecnologias">
+                <i class="fa-brands fa-js"></i>
+                <i class="fa-brands fa-php"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Project -->
+          <div class="project">
+            <!-- Project -->
+            <i class="icon icon-eye"></i>
+            <div class="project_content">
+              <h3>Dev Jobs</h3>
+              <p>Red social par crear y postularse a propuestas de trabajo.</p>
+              <div class="tecnologias">
+                <i class="fa-brands fa-node"></i>
+                <i class="fa-brands fa-js"></i>
+                <div style="color: #3fa037; font-size: 1.5rem">
+                  <i class="fa-solid fa-database"></i> Mongo
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project -->
+        </div>
+      </section>
+
+      <section class="tiny-content">
+        <h2 class="section_h2">
+          <div class="texto-icono">
+            Contacto <i class="icon icon-envelope primary-dark"></i> / Sociales
+            <i class="icon icon-at primary-dark"></i>
+          </div>
+        </h2>
+
+        <div class="contacto_grid">
+          <div class="correo">
+            <div class="btn-ct" id="copy">
+              <button class="btn">
+                <div class="texto-icono">
+                  marianofrank@hotmail.com<i class="icon icon-copy"></i>
+                </div>
+              </button>
+              <div class="btn-bg"></div>
+            </div>
+            <div class="btn-ct" data-tippy-content="Enviame un mail">
+              <div class="btn btn-icon">
+                <i class="icon icon-paper-plane"></i>
+              </div>
+              <div class="btn-bg"></div>
+            </div>
+          </div>
+
+          <div class="redes_sociales">
+            <div class="btn-ct">
+              <a href="" class="btn btn-icon" id="instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <div class="btn-bg"></div>
+            </div>
+
+            <div class="btn-ct">
+              <a
+                href=""
+                class="btn btn-icon"
+                id="whatsapp"
+                data-tippy-content="Enviame un mensaje 🤙"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+              <div class="btn-bg"></div>
+            </div>
+
+            <div class="btn-ct">
+              <a href="" class="btn btn-icon" id="linkedin"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <div class="btn-bg"></div>
+            </div>
+
+            <div class="btn-ct">
+              <a href="" class="btn btn-icon" id="github"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <div class="btn-bg"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="espacio-en-blanco"></div>
+  </body>
+
+  <script src="/public/js/index.min.js"></script>
+</html>
