@@ -27,7 +27,13 @@
     <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
 
     <!-- Css -->
-    <link rel="stylesheet" href="/public/css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="/public/css/styles.css" />
     <link rel="stylesheet" href="/public/icons/style.css" />
 
@@ -42,7 +48,67 @@
   </head>
 
   <body class="animate__animated animate__fadeInDown">
-  hola
+    <main>
+      <section class="tiny-content">
+        <div class="presentacion_acciones">
+          <div class="btn-ct">
+            <a class="btn" href="/">
+              <div class="texto-icono">
+                <i class="icon icon-arrow-left"></i>
+                Volver
+              </div>
+            </a>
+            <div class="btn-bg"></div>
+          </div>
+
+          <div class="btn-ct">
+            <button class="btn btn-icon" id="darkMode">
+              <i class="icon icon-moon-over-sun"></i>
+            </button>
+            <div class="btn-bg"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tiny-content">
+        <h1>DevJobs</h1>
+        <p>
+          No cuento con hosting para este proyecto
+          <i
+            class="em em-anguished"
+            aria-role="presentation"
+            aria-label="ANGUISHED FACE"
+          ></i>
+          pero pasaré a explicartelo.
+        </p>
+        <p>
+          Este proyecto lo hice para practicar, con la idea de una red social
+          para publicar trabajos como linkedin.
+        </p>
+        <p>
+          Cuenta con el flujo de creacion de usuarios tipica, con envio de token
+          al email. Una vez creada la cuenta podemos subir las vacantes.
+        </p>
+
+        <div class="img-explain">
+          <picture>
+            <source
+              srcset="../public/images/projects/devjobs/crear.avif"
+              type="image/avif"
+            />
+            <source
+              srcset="../public/images/projects/devjobs/crear.webp"
+              type="image/webp"
+            />
+            <img
+              src="../public/images/projects/devjobs/crear.png"
+              alt="DevJobs"
+              class="project-img-explain"
+            />
+          </picture>
+        </div>
+      </section>
+    </main>
   </body>
 
   <script src="/public/js/index.min.js"></script>

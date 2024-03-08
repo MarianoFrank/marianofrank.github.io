@@ -24,6 +24,16 @@ i.icon {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-arrow-left::before {
+  position: absolute;
+  content: "\e918";
+  opacity: 0.4;
+}
+.icon-arrow-left::after {
+  content: "\e919";
+}
+
 .icon-gear::before {
   position: absolute;
   content: "\e912";
