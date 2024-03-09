@@ -48,7 +48,7 @@
   </head>
 
   <body class="animate__animated animate__fadeInDown">
-    <main>
+    <main style="padding-bottom: 4rem;">
       <section class="tiny-content">
         <div class="presentacion_acciones">
           <div class="btn-ct">
@@ -79,18 +79,24 @@
             aria-role="presentation"
             aria-label="ANGUISHED FACE"
           ></i>
-          pero pasaré a explicartelo.
+          pero pasaré a explicártelo.
         </p>
         <p>
           Este proyecto lo hice para practicar, con la idea de una red social
-          para publicar trabajos como linkedin.
+          para publicar trabajos como LinkedIn.
         </p>
         <p>
-          Cuenta con el flujo de creacion de usuarios tipica, con envio de token
+          Cuenta con el flujo de creación de usuarios típica, con envío de token
           al email. Una vez creada la cuenta podemos subir las vacantes.
         </p>
 
-        <div class="img-explain zoom"  style="background-image: url(../public/images/projects/devjobs/crear.png)">
+        <div
+          class="img-explain zoom"
+          style="
+            background-image: url(../public/images/projects/devjobs/crear.png);
+            background-size: 90rem;
+          "
+        >
           <picture>
             <source
               srcset="../public/images/projects/devjobs/crear.avif"
@@ -107,7 +113,129 @@
             />
           </picture>
         </div>
-        
+
+        <p>
+          Asi es como se ve la vacante una vez publicada, cuenta con subida de
+          CV en pdf.
+        </p>
+
+        <div
+          class="img-explain zoom"
+          style="
+            background-image: url(../public/images/projects/devjobs/vacante.png);
+            background-size: 90rem;
+          "
+        >
+          <picture>
+            <source
+              srcset="../public/images/projects/devjobs/vacante.avif"
+              type="image/avif"
+            />
+            <source
+              srcset="../public/images/projects/devjobs/vacante.webp"
+              type="image/webp"
+            />
+            <img
+              src="../public/images/projects/devjobs/vacante.png"
+              alt="DevJobs"
+              class="project-img-explain"
+            />
+          </picture>
+        </div>
+
+        <p>
+          A continuación se ve el dashboard de un usuario que publicó algunas
+          vacantes.
+        </p>
+
+        <div
+          class="img-explain zoom"
+          style="
+            background-image: url(../public/images/projects/devjobs/dashboard.png);
+            background-size: 90rem;
+          "
+        >
+          <picture>
+            <source
+              srcset="../public/images/projects/devjobs/dashboard.avif"
+              type="image/avif"
+            />
+            <source
+              srcset="../public/images/projects/devjobs/dashboard.webp"
+              type="image/webp"
+            />
+            <img
+              src="../public/images/projects/devjobs/dashboard.png"
+              alt="DevJobs"
+              class="project-img-explain"
+            />
+          </picture>
+        </div>
+
+        <p>Lo usuarios pueden modificar los datos de su cuenta.</p>
+
+        <div
+          class="img-explain zoom"
+          style="
+            background-image: url(../public/images/projects/devjobs/cuenta.png);
+            background-size: 90rem;
+          "
+        >
+          <picture>
+            <source
+              srcset="../public/images/projects/devjobs/cuenta.avif"
+              type="image/avif"
+            />
+            <source
+              srcset="../public/images/projects/devjobs/cuenta.webp"
+              type="image/webp"
+            />
+            <img
+              src="../public/images/projects/devjobs/cuenta.png"
+              alt="DevJobs"
+              class="project-img-explain"
+            />
+          </picture>
+        </div>
+
+        <p>
+          Por ultimo asi se ve el inicio donde cualquier persona podrá buscar
+          y postularse a las vacantes.
+        </p>
+        <div
+          class="img-explain zoom"
+          style="
+            background-image: url(../public/images/projects/devjobs/inicio.png);
+            background-size: 90rem;
+          "
+        >
+          <picture>
+            <source
+              srcset="../public/images/projects/devjobs/inicio.avif"
+              type="image/avif"
+            />
+            <source
+              srcset="../public/images/projects/devjobs/inicio.webp"
+              type="image/webp"
+            />
+            <img
+              src="../public/images/projects/devjobs/inicio.png"
+              alt="DevJobs"
+              class="project-img-explain"
+            />
+          </picture>
+        </div>
+      </section>
+      <section class="tiny-content">
+        <div class="btn-ct">
+          <a class="btn" href="/">
+            <div class="texto-icono">
+              <i class="icon icon-arrow-left"></i>
+              Volver
+            </div>
+          </a>
+          <div class="btn-bg"></div>
+        </div>
       </section>
     </main>
   </body>
