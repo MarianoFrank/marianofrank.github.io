@@ -90,7 +90,7 @@
           al email. Una vez creada la cuenta podemos subir las vacantes.
         </p>
 
-        <div class="img-explain">
+        <div class="img-explain zoom"  style="background-image: url(../public/images/projects/devjobs/crear.png)">
           <picture>
             <source
               srcset="../public/images/projects/devjobs/crear.avif"
@@ -107,6 +107,7 @@
             />
           </picture>
         </div>
+        
       </section>
     </main>
   </body>
