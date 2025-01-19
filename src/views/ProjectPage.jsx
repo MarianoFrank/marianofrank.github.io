@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useParams } from 'react-router';
 
 import projects from '../data/projects';
@@ -14,6 +14,7 @@ import Tooltip from '../components/Tooltip';
 import Lightbox from "yet-another-react-lightbox";
 import { Zoom, Video } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/styles.css";
+import '../css/lightbox.css';
 
 //Swiper
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
@@ -50,6 +51,8 @@ const ProjectPage = () => {
         switch (entry.type) {
             case 'image':
                 return entry.data.map((image) => ({
+                    type: 'image',
+                    imageFit: 'contain',
                     src: `/images/${project.id}/${image}.jpeg`,
                     index: globalIndex++,
                     name: image,
@@ -63,22 +66,31 @@ const ProjectPage = () => {
                             type: "video/mp4",
                         },
                     ],
-                    index: globalIndex++,
-                    name: entry.data,
+                    autoPlay: true,
+                    disablePictureInPicture: true,
+                    //index: globalIndex++,
+                    //name: entry.data,
+                    preload: 'auto'
                 };
             default:
                 return [];
         }
     });
 
+    const videoRefs = useRef([]);
 
+    //el name solo llega de imagenes, decidi no dar el mismo soporte a los videos
     const handleClick = (name) => {
 
+        //pausar todos los videos al abrir cualquier imagen
+        videoRefs.current.forEach((video) => {
+            if (video) {
+                video.pause();
+            }
+        });
+
         const { index } = slides.find(item => item.name === name);
-        console.log(index)
-        if (index) {
-            setIndex(index);
-        }
+        setIndex(index);
         setOpen(true);
     };
 
@@ -174,10 +186,12 @@ const ProjectPage = () => {
                                     );
                                 case 'video':
                                     return (
-                                        <div key={index} onClick={() => handleClick(entry.data)}>
-                                            <video className='rounded-lg' controls preload="metadata">
+                                        <div key={index} className='1 group cursor-pointer'>
+                                            <video
+                                                ref={(el) => (videoRefs.current[index] = el)}
+                                                className='rounded-lg cursor-pointer' controls controlsList="nodownload nofullscreen noremoteplayback" preload="auto">
                                                 <source src={`/images/${project.id}/${entry.data}.mp4`} type="video/mp4" />
-                                                Your browser does not support the video .
+                                                Your browser does not support the video 🚫.
                                             </video>
                                         </div>
                                     );
@@ -187,13 +201,12 @@ const ProjectPage = () => {
                         })}
                     </div> {/* Entries */}
 
-
-
                 </section>
 
                 <div >
                     <Button onClick={() => navigate("/")} icon="arrow-left" text="Volver" buttonType="normal" invertIcon={true} />
                 </div>
+
             </main >
             <Lightbox
                 open={open}
@@ -204,8 +217,9 @@ const ProjectPage = () => {
                     fade: 200,
                 }}
                 plugins={[Zoom, Video]}
-                styles={{ root: { "--yarl__color_backdrop": "rgba(0, 0, 0, .5)" } }}
-
+                styles={{
+                    root: { "--yarl__color_backdrop": "rgba(0, 0, 0, .5)" },
+                }}
                 controller={{
                     closeOnBackdropClick: true,
                     closeOnPullUp: true,
