@@ -1,23 +1,68 @@
+/* NOTAS:
+
+-La imagen siempre debe ser un array aunque sea una solas.
+
+-Resoluciones que me parecen adecuadas:
+    -Imagenes y videos: 1600x900 
+    -Miniaturas: 640x360
+
+ */
+
 const projects = [
     {
-        id: 'devjobs',
-        name: 'DevJobs',
+        id: 'freshcoffe',
+        name: 'FreshCoffe',
         colors: {
-            light: 'rgba(255, 0, 0, 0.5)',
-            dark: 'rgba(255, 0, 0, 0.1)'
+            light: '#FACC15',
+            dark: '#FACC15'
         },
         resume: 'Plataforma de e-commerce, experiencia de compra intuitiva y diseño elegante.',
         introduction: 'Lorem ipsum <strong>dolor</strong>  sit amet, consectetur adipiscing elit. Aliquam sed lorem at metus finibus molestie. Nullam ullamcorper varius aliquet. Duis et ornare metus. Fusce urna erat, pretium nec vestibulum sagittis, finibus in nulla. Mauris blandit tincidunt tempus. Mauris euismod est in ullamcorper lacinia. Donec auctor felis augue, ac aliquam enim feugiat id. Nulla vestibulum, nunc id condimentum sodales, neque nisi vehicula urna, eget semper urna sapien in risus. ',
         content: [
             {
-                images: ['1', '2'],
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed lorem at met',
-                miniature: true
+                type: 'image',
+                data: ['1', '2_1'],
             },
             {
-                images: ['2'],
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed lorem at met'
+                type: 'paragraph',
+                data: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed lorem at met'
+            },
+            {
+                type: 'video',
+                data: '6'
             }
+        ],
+        technologies: [
+            {
+                name: 'Livewire',
+                icon: 'livewire'
+            }
+        ],
+        github: 'https://github.com',
+    },
+    {
+        id: 'devjobs',
+        name: 'DevJobs',
+        colors: {
+            light: '#4F46E5',
+            dark: '#4F46E5'
+        },
+        resume: 'Plataforma de e-commerce, experiencia de compra intuitiva y diseño elegante.',
+        introduction: 'Lorem ipsum <strong>dolor</strong>  sit amet, consectetur adipiscing elit. Aliquam sed lorem at metus finibus molestie. Nullam ullamcorper varius aliquet. Duis et ornare metus. Fusce urna erat, pretium nec vestibulum sagittis, finibus in nulla. Mauris blandit tincidunt tempus. Mauris euismod est in ullamcorper lacinia. Donec auctor felis augue, ac aliquam enim feugiat id. Nulla vestibulum, nunc id condimentum sodales, neque nisi vehicula urna, eget semper urna sapien in risus. ',
+        content: [
+            {
+                type: 'image',
+                data: ['1', '2'],
+
+            },
+            {
+                type: 'paragraph',
+                data: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed lorem at met'
+            },
+            // {
+            //     type: 'video',
+            //     data: '1'
+            // }
         ],
         technologies: [
             {
@@ -66,8 +111,8 @@ const projects = [
         id: 'devstagram',
         name: 'Devstagram',
         colors: {
-            light: 'rgba(255, 235, 0, 0.5)',
-            dark: 'rgba(255, 235, 0, 0.1)'
+            light: '#EEDDD6',
+            dark: '#EEDDD6'
         },
         resume: 'Plataforma de e-commerce, experiencia de compra intuitiva y diseño elegante.',
         introduction: `
@@ -83,15 +128,18 @@ const projects = [
         `,
         content: [
             {
-                images: ['1'],
-                text: 'This is an image description',
-                miniature: true
+                type: 'image',
+                data: ['1', '2'],
+
             },
             {
-
-                text: 'This is an image description',
-
-            }
+                type: 'paragraph',
+                data: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed lorem at met'
+            },
+            // {
+            //     type: 'video',
+            //     data: '1'
+            // }
         ],
         technologies: [
             {

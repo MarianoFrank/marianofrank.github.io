@@ -5,9 +5,10 @@
 }
 
 .swiper-slide {
-  padding: 0;
+  padding: 0 !important;
 }
 
 .swiper {
   border-radius: 10px;
+  height: fit-content;
 }

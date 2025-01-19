@@ -12,7 +12,7 @@ import Tooltip from '../components/Tooltip';
 
 //Lightbox
 import Lightbox from "yet-another-react-lightbox";
-import { Zoom } from "yet-another-react-lightbox/plugins";
+import { Zoom, Video } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/styles.css";
 
 //Swiper
@@ -21,7 +21,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
+import '../css/swiper.css';
 
 const ProjectPage = () => {
     const { id } = useParams();
@@ -44,18 +44,38 @@ const ProjectPage = () => {
     const [open, setOpen] = useState(false);
     const [index, setIndex] = useState(0);
 
-    const imagesArray =
-        project.content.flatMap((entry) =>
-            entry.images ? entry.images.map((image, index) => ({
-                src: `/images/${project.id}/${image}.jpeg`,
-                index,
-                name: image
-            })) : []
-        );
+    let globalIndex = 0;
+
+    const slides = project.content.flatMap((entry) => {
+        switch (entry.type) {
+            case 'image':
+                return entry.data.map((image) => ({
+                    src: `/images/${project.id}/${image}.jpeg`,
+                    index: globalIndex++,
+                    name: image,
+                }));
+            case 'video':
+                return {
+                    type: 'video',
+                    sources: [
+                        {
+                            src: `/images/${project.id}/${entry.data}.mp4`,
+                            type: "video/mp4",
+                        },
+                    ],
+                    index: globalIndex++,
+                    name: entry.data,
+                };
+            default:
+                return [];
+        }
+    });
 
 
-    const handleClickImage = (name) => {
-        const { index } = imagesArray.find(item => item.name === name);
+    const handleClick = (name) => {
+
+        const { index } = slides.find(item => item.name === name);
+        console.log(index)
         if (index) {
             setIndex(index);
         }
@@ -112,45 +132,62 @@ const ProjectPage = () => {
 
                 <section>
                     <SectionHeader text={`Capturas`} icon="image-polaroid" />
-                    <div className="space-y-6">
+
+                    <div className='space-y-10'>
                         <p>Ahora, te invito a explorar los detalles del proyecto <span className='font-bold'>{`${project.name}`}</span> a través de una revisión visual de sus componentes principales.</p>
+
                         {project.content.map((entry, index) => {
-                            return (
-                                <div key={index}>
-                                    <Swiper
-                                        modules={[Navigation, Pagination, Autoplay]}
-                                        spaceBetween={16}
-                                        navigation
-                                        pagination={{ clickable: true }}
-                                        style={swiperStyles}
-                                        autoplay={{
-                                            delay: 5000,
-                                            disableOnInteraction: false,
-                                            pauseOnMouseEnter: true
+                            switch (entry.type) {
+                                case 'paragraph':
+                                    return (
+                                        <p key={index}>{entry.data}</p>
+                                    );
+                                case 'image':
+                                    return (
+                                        <div key={index}>
+                                            <Swiper
+                                                modules={[Navigation, Pagination, Autoplay]}
+                                                spaceBetween={16}
+                                                navigation
+                                                pagination={{ clickable: true }}
+                                                style={swiperStyles}
+                                                autoplay={{
+                                                    delay: 5000,
+                                                    disableOnInteraction: false,
+                                                    pauseOnMouseEnter: true
 
-                                        }}
-                                        speed={200}
-                                        loop={entry.images && entry.images.length > 1 ? true : false}
-
-                                    >
-                                        {entry.images && entry.images.map((image, index) => {
-
-                                            return (
-                                                <SwiperSlide className='py-8' key={`${image}-${index}`}>
-                                                    <div onClick={() => handleClickImage(image)} className='cursor-pointer'>
-                                                        <Picture className={'rounded-lg'} imageName={`/${project.id}/${image}`} alt={`Image for ${project.name}`} />
-                                                    </div>
-                                                </SwiperSlide>
-                                            );
-                                        })}
-                                    </Swiper>
-
-                                    <p className={`${!entry.images ? 'mt-0' : 'mt-4'}`}>{entry.text}</p>
-                                </div> // gallery
-                            );
+                                                }}
+                                                speed={200}
+                                                loop={entry.data.length > 1 ? true : false}
+                                            >
+                                                {entry.data.map((image, index) => {
+                                                    return (
+                                                        <SwiperSlide className='py-8' key={`${image}-${index}`}>
+                                                            <div onClick={() => handleClick(image)} className='cursor-pointer'>
+                                                                <Picture className={'rounded-lg'} imageName={`/${project.id}/${image}`} alt={`Image for ${project.name}`} />
+                                                            </div>
+                                                        </SwiperSlide>
+                                                    );
+                                                })}
+                                            </Swiper>
+                                        </div> // gallery
+                                    );
+                                case 'video':
+                                    return (
+                                        <div key={index} onClick={() => handleClick(entry.data)}>
+                                            <video className='rounded-lg' controls preload="metadata">
+                                                <source src={`/images/${project.id}/${entry.data}.mp4`} type="video/mp4" />
+                                                Your browser does not support the video .
+                                            </video>
+                                        </div>
+                                    );
+                                default:
+                                    break;
+                            }
                         })}
+                    </div> {/* Entries */}
 
-                    </div>
+
 
                 </section>
 
@@ -161,12 +198,27 @@ const ProjectPage = () => {
             <Lightbox
                 open={open}
                 close={() => setOpen(false)}
-                slides={imagesArray}
+                slides={slides}
                 index={index}
                 animation={{
-                    fade: 500
+                    fade: 200,
                 }}
-                plugins={[Zoom]}
+                plugins={[Zoom, Video]}
+                styles={{ root: { "--yarl__color_backdrop": "rgba(0, 0, 0, .5)" } }}
+
+                controller={{
+                    closeOnBackdropClick: true,
+                    closeOnPullUp: true,
+                    closeOnPullDown: true
+                }}
+                noScroll={{
+                    disabled: true
+                }}
+                zoom={
+                    {
+
+                    }
+                }
             />
         </div >
     );
