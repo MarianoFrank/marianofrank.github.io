@@ -5,7 +5,8 @@
 }
 
 .swiper-slide {
-  padding: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 2rem;
 }
 
 .swiper {

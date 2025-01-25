@@ -20,15 +20,15 @@ const Projects = () => (
                     project={projects[1]}
                     colors={projects[1].colors}
                     inverted={true} />
-                <ProjectCardPrimary
+                {/* <ProjectCardPrimary
                     project={projects[2]}
-                    colors={projects[2].colors} />
+                    colors={projects[2].colors} /> */}
             </div>
 
 
             <div className="grid  grid-cols-1 md:grid-cols-2 gap-4">
                 {projects.map((project, index) => {
-                    if (index < 3) return null;
+                    if (index < 2) return null;
                     return (
                         <ProjectCardSecundary
                             key={index}

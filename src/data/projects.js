@@ -21,15 +21,25 @@ const projects = [
         content: [
             {
                 type: 'image',
-                data: ['1', '2_1'],
-            },
-            {
-                type: 'paragraph',
-                data: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed lorem at met'
+                data: [
+                    {
+                        name: '1',
+                        description: 'Imagen de la página principal'
+                    },
+                    {
+                        name: '2_1',
+                        description: 'Imagen de la página principal'
+                    },
+                ],
             },
             {
                 type: 'video',
-                data: '6'
+                data: [
+                    {
+                        name: '6',
+                        description: 'Video de presentación'
+                    }
+                ],
             }
         ],
         technologies: [
