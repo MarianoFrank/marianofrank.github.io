@@ -16,20 +16,49 @@ const projects = [
             light: '#FACC15',
             dark: '#FACC15'
         },
-        resume: 'Plataforma de e-commerce, experiencia de compra intuitiva y diseño elegante.',
-        introduction: 'Lorem ipsum <strong>dolor</strong>  sit amet, consectetur adipiscing elit. Aliquam sed lorem at metus finibus molestie. Nullam ullamcorper varius aliquet. Duis et ornare metus. Fusce urna erat, pretium nec vestibulum sagittis, finibus in nulla. Mauris blandit tincidunt tempus. Mauris euismod est in ullamcorper lacinia. Donec auctor felis augue, ac aliquam enim feugiat id. Nulla vestibulum, nunc id condimentum sodales, neque nisi vehicula urna, eget semper urna sapien in risus. ',
+        resume: 'E-commerce gastronómico con WebSockets para seguimiento de pedidos en tiempo real.',
+        introduction: `
+        <p>FreshCoffee es un e-commerce gastronómico para cafeterías. La plataforma integra un sistema completo de pedidos y administración con las siguientes funcionalidades:</p>
+        <ul class="w-full grid grid-cols-1 gap-4 list-disc pl-8 mb-5 md:w-auto md:mb-0">
+            <li><strong>Sistema de pedidos interactivo:</strong> Carrito de compras dinámico con gestión de estados mediante React Context y useState.</li>
+            <li><strong>Notificaciones en tiempo real:</strong> Feedback visual inmediato para acciones de compra y confirmaciones.</li>
+            <li><strong>Panel administrativo con WebSockets:</strong> Visualización instantánea de pedidos sin recargar la página.</li>
+            <li><strong>Autenticación JWT:</strong> Sistema seguro de registro y login con tokens de acceso y refresco.</li>
+            <li><strong>Gestor de órdenes:</strong> Historial detallado con seguimiento de estados personalizables (en proceso/completado).</li>
+            <li><strong>Dashboard administrativo:</strong> Control centralizado para gestión de productos, usuarios y métricas.</li>
+            <li><strong>Diseño responsive:</strong> Interfaz adaptable a diferentes dispositivos móviles y desktop.</li>
+            <li><strong>Comunicación bidireccional:</strong> Actualizaciones simultáneas entre cliente y administrador mediante WebSockets.</li>
+        </ul>
+        `,
         content: [
             {
                 type: 'image',
                 data: [
                     {
                         name: '1',
-                        description: 'Imagen de la página principal'
+                        description: 'Formulario de registro'
                     },
                     {
                         name: '2_1',
-                        description: 'Imagen de la página principal'
+                        description: 'Pagina principal'
                     },
+                    {
+                        name: '2_2',
+                        description: 'Pagina principal'
+                    },
+                    {
+                        name: '3',
+                        description: 'Ventana modal para agregar productos al carrito'
+                    },
+                    {
+                        name: '4',
+                        description: ' Carrito lleno'
+                    },
+                    {
+                        name: '5',
+                        description: 'Orden enviada'
+                    }
+
                 ],
             },
             {
@@ -37,15 +66,31 @@ const projects = [
                 data: [
                     {
                         name: '6',
-                        description: 'Video de presentación'
+                        description: 'Demostración de la funcionalidad de WebSockets'
                     }
                 ],
             }
         ],
         technologies: [
             {
-                name: 'Livewire',
-                icon: 'livewire'
+                name: 'Laravel',
+                description: 'para la API de backend y servicios de WebSockets',
+                icon: 'laravel',
+            },
+            {
+                name: 'React',
+                description: 'frontend',
+                icon: 'react',
+            },
+            {
+                name: 'TailwindCSS',
+                description: 'para el diseño y estilos',
+                icon: 'tailwind',
+            },
+            {
+                name: 'MySQL',
+                description: 'database',
+                icon: 'MySQL',
             }
         ],
         github: 'https://github.com',
@@ -57,17 +102,73 @@ const projects = [
             light: '#4F46E5',
             dark: '#4F46E5'
         },
-        resume: 'Plataforma de e-commerce, experiencia de compra intuitiva y diseño elegante.',
-        introduction: 'Lorem ipsum <strong>dolor</strong>  sit amet, consectetur adipiscing elit. Aliquam sed lorem at metus finibus molestie. Nullam ullamcorper varius aliquet. Duis et ornare metus. Fusce urna erat, pretium nec vestibulum sagittis, finibus in nulla. Mauris blandit tincidunt tempus. Mauris euismod est in ullamcorper lacinia. Donec auctor felis augue, ac aliquam enim feugiat id. Nulla vestibulum, nunc id condimentum sodales, neque nisi vehicula urna, eget semper urna sapien in risus. ',
+        resume: 'Plataforma de empleos con roles (reclutador/postulante), integración de CVs en PDF y notificaciones.',
+        introduction: `
+        <p>DevJobs es una aplicación de gestión laboral, desarrollada con Laravel, Blade y Livewire. La plataforma ofrece funcionalidades especializadas para ambos roles:</p>
+        <ul class="w-full grid grid-cols-1 gap-4 list-disc pl-8 mb-5 md:w-auto md:mb-0">
+            <li><strong>Panel de reclutadores:</strong> CRUD completo para vacantes, visualización de postulantes y notificaciones por email.</li>
+            <li><strong>Funcionalidades para postulantes:</strong> Búsqueda avanzada con filtros (categoría, salario, nombre) y envío de CV en PDF.</li>
+            <li><strong>Generación de PDFs:</strong> Descarga automática de resúmenes de vacantes y gestión de CVs en formato PDF.</li>
+            <li><strong>Notificaciones bidireccionales:</strong> Alertas en tiempo real para postulaciones y actualizaciones de vacantes.</li>
+            <li><strong>Validaciones robustas:</strong> Control de formatos de archivo (PDF) y validaciones en formularios de registro/postulación.</li>
+            <li><strong>Interfaz dinámica:</strong> Componentes reactivos desarrollados con Livewire y Alpine.js para interacciones fluidas.</li>
+            <li><strong>Autenticación segmentada:</strong> Sistema de registro/login diferenciado para reclutadores y postulantes.</li>
+            <li><strong>Comunicación automatizada:</strong> Envío de correos electrónicos ante nuevas postulaciones o actualizaciones.</li>
+        </ul>
+        `,
         content: [
             {
                 type: 'image',
-                data: ['1', '2'],
-
-            },
-            {
-                type: 'paragraph',
-                data: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed lorem at met'
+                data: [
+                    {
+                        name: '1_1',
+                        description: 'Imagen de la página principal'
+                    },
+                    {
+                        name: '1_2',
+                        description: 'Imagen de la página principal'
+                    },
+                    {
+                        name: '1_3',
+                        description: 'Imagen de la página principal'
+                    },
+                    {
+                        name: '3',
+                        description: 'Imagen de la página principal'
+                    },
+                    {
+                        name: '4',
+                        description: 'Imagen de la página principal'
+                    },
+                    {
+                        name: '5',
+                        description: 'Imagen de la página principal'
+                    },
+                    {
+                        name: '6_1',
+                        description: 'Imagen de la página principal'
+                    },
+                    {
+                        name: '6_2',
+                        description: 'Imagen de la página principal'
+                    },
+                    {
+                        name: '6_3',
+                        description: 'Imagen de la página principal'
+                    },
+                    {
+                        name: '6_4',
+                        description: 'Imagen de la página principal'
+                    },
+                    {
+                        name: '7_1',
+                        description: 'Imagen de la página principal'
+                    },
+                    {
+                        name: '7_2',
+                        description: 'Imagen de la página principal'
+                    }
+                ],
             },
             // {
             //     type: 'video',
@@ -76,43 +177,29 @@ const projects = [
         ],
         technologies: [
             {
-                name: 'React',
-                icon: 'fab fa-react',
-                color: '#61DAFB',
-                description: 'Used for the frontend'
+                name: 'Laravel',
+                description: 'para la API de backend y servicios de WebSockets',
+                icon: 'laravel',
             },
             {
-                name: 'Node.js',
-                icon: 'fab fa-node-js',
-                color: '#339933',
-                description: 'Used for the backend'
+                name: 'Livewire',
+                description: 'para la interactividad en tiempo real',
+                icon: 'livewire',
             },
             {
-                name: 'JavaScript',
-                icon: 'fab fa-js',
-                color: '#F7DF1E'
+                name: 'AlpineJS',
+                description: 'para la interactividad en tiempo real',
+                icon: 'alpinejs',
             },
             {
-                name: 'HTML5',
-                icon: 'fab fa-html5',
-                color: '#E34F26',
-                description: 'Used for the markup'
+                name: 'TailwindCSS',
+                description: 'para el diseño y estilos',
+                icon: 'tailwind',
             },
             {
-                name: 'CSS3',
-                icon: 'fab fa-css3-alt',
-                color: '#1572B6'
-            },
-            {
-                name: 'PHP',
-                icon: 'fab fa-php',
-                color: '#777BB4',
-                description: 'Used for the backend'
-            },
-            {
-                name: 'GitHub',
-                icon: 'fab fa-github',
-                color: '#171515'
+                name: 'MySQL',
+                description: 'database',
+                icon: 'MySQL',
             }
         ],
         github: 'https://github.com',
@@ -139,12 +226,17 @@ const projects = [
         content: [
             {
                 type: 'image',
-                data: ['1', '2'],
+                data: [
+                    {
+                        name: '1',
+                        description: 'Imagen de la página principal'
+                    },
+                    {
+                        name: '2_1',
+                        description: 'Imagen de la página principal'
+                    },
+                ],
 
-            },
-            {
-                type: 'paragraph',
-                data: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed lorem at met'
             },
             // {
             //     type: 'video',

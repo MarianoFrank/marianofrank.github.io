@@ -22,8 +22,8 @@ import { Navigation, Pagination, EffectFade } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
+import 'swiper/css/pagination';
 import '../css/swiper.css';
 
 const ProjectPage = () => {
@@ -98,7 +98,7 @@ const ProjectPage = () => {
 
     const handleSlideChange = (swiper) => {
         pauseVideos();
-        setIndex(swiper.activeIndex);
+        setIndex(swiper.realIndex);
     }
 
     return (
@@ -140,7 +140,7 @@ const ProjectPage = () => {
                                         <img src={`/icons/technologies/${tech.icon}.svg`} alt={tech.name} type="svg" loading='lazy' className='h-4 w-4' />
                                         <p>
                                             {` ${tech.name} `}
-                                            {tech.description ? `, ${tech.description}` : ""}
+                                            {tech.description ? `${tech.description}` : ""}
                                         </p>
                                     </div>
                                 </li>
@@ -156,9 +156,9 @@ const ProjectPage = () => {
                         <p>Ahora, te invito a explorar los detalles del proyecto <span className='font-bold'>{`${project.name}`}</span> a través de una revisión visual de sus componentes principales.</p>
                         <Swiper
                             modules={[Navigation, Pagination, EffectFade]}
-                            spaceBetween={16}
+                            spaceBetween={0}
                             navigation
-                            pagination={{ clickable: true }}
+                            pagination={{ clickable: true, type: 'fraction' }}
                             style={swiperStyles}
                             autoplay={{
                                 delay: 5000,
@@ -166,10 +166,11 @@ const ProjectPage = () => {
                                 pauseOnMouseEnter: true
 
                             }}
+                            effect={'fade'}
                             speed={200}
                             loop={true}
-                            effect={'fade'}
                             onSlideChange={(e) => handleSlideChange(e)}
+                            autoHeight={true}
                         >
                             {project.content.map((entry, index) => {
                                 return (
@@ -183,11 +184,11 @@ const ProjectPage = () => {
                                                             <div >
                                                                 <video
                                                                     ref={(el) => (videoRefs.current[index] = el)}
-                                                                    className='rounded-t-lg' controls controlsList="nodownload noremoteplayback" preload="auto">
+                                                                    className='' controls controlsList="nodownload noremoteplayback" preload="auto">
                                                                     <source src={`/images/${project.id}/${mediaItem.name}.mp4`} type="video/mp4" />
                                                                     Your browser does not support the video 🚫.
                                                                 </video>
-                                                                <p className={`rounded-b-lg p-2 text-sm font-bold w-full
+                                                                <p className={` p-2 text-sm font-bold w-full
                                                                     ${darkMode ? "bg-darkMode-primary_light !text-darkMode-primary" : "bg-lightMode-primary_light text-lightMode-primary"}
                                                                     `} >{mediaItem.description}</p>
                                                             </div>
@@ -197,8 +198,8 @@ const ProjectPage = () => {
                                                     return (
                                                         <SwiperSlide key={`${mediaItem.name}-${index}`}>
                                                             <div onClick={() => handleClick(mediaItem.name)} className={`cursor-pointer`}>
-                                                                <Picture className={'rounded-t-lg'} imageName={`/${project.id}/${mediaItem.name}`} alt={`Image for ${project.name}`} />
-                                                                <p className={`rounded-b-lg p-2 text-sm font-bold w-full
+                                                                <Picture className={''} imageName={`/${project.id}/${mediaItem.name}`} alt={`Image for ${project.name}`} />
+                                                                <p className={` p-2 text-sm font-bold w-full
                                                                     ${darkMode ? "bg-darkMode-primary_light !text-darkMode-primary" : "bg-lightMode-primary_light text-lightMode-primary"}
                                                                     `} >{mediaItem.description}</p>
                                                             </div>
@@ -212,6 +213,7 @@ const ProjectPage = () => {
                                 );
                             })}
                         </Swiper>
+
                     </div> {/* Entries */}
 
 

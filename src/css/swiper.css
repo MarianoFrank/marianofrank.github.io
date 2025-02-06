@@ -4,12 +4,16 @@
   border-radius: 0.5rem;
 }
 
-.swiper-slide {
-  padding-top: 0 !important;
-  padding-bottom: 2rem;
+.swiper {
+  border-radius: 10px !important;
+  height: fit-content;
+  margin-bottom: 1.5rem !important;
 }
 
-.swiper {
-  border-radius: 10px;
-  height: fit-content;
+.swiper-pagination {
+  width: 100% !important;
+  display: block !important;
+  justify-self: end !important;
+  text-align: end !important;
+  padding-right: 2rem;
 }
