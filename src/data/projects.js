@@ -211,7 +211,7 @@ const projects = [
             light: '#EEDDD6',
             dark: '#EEDDD6'
         },
-        resume: 'Plataforma de e-commerce, experiencia de compra intuitiva y diseño elegante.',
+        resume: 'Plataforma social interactiva inspirada en Instagram, que permite a los usuarios compartir fotos e interactuar entre si.',
         introduction: `
         <p>Desvstagram es una plataforma social interactiva, inspirada en Instagram, desarrollada con Laravel y Blade. Diseñada para fomentar la conexión y el intercambio visual, esta aplicación permite a los usuarios:</p>
         <ul class="w-full grid grid-cols-1 gap-4 list-disc  pl-8  mb-5 md:w-auto md:mb-0">
@@ -252,7 +252,82 @@ const projects = [
             {
                 name: 'Livewire',
                 icon: 'livewire'
+            },
+            {
+                name: 'TailwindCSS',
+                description: 'para el diseño y estilos',
+                icon: 'tailwind',
+            },
+            {
+                name: 'MySQL',
+                description: 'database',
+                icon: 'MySQL',
             }
+        ],
+        github: 'https://github.com',
+    }
+    ,
+    {
+
+        id: 'meeti',
+        name: 'Meeti',
+        colors: {
+            light: '#34D399',
+            dark: '#065F46'
+        },
+        resume: 'Plataforma inspirada en Meetup que facilita la creación de grupos y eventos con mapas interactivos y búsqueda geoespacial.',
+        introduction: `
+                <p>Meeti es una aplicación inspirada en Meetup, diseñada para que las personas puedan crear grupos y organizar eventos con fechas y horarios específicos.</p>
+                <ul class="w-full grid grid-cols-1 gap-4 list-disc pl-8 mb-5 md:w-auto md:mb-0">
+                    <li><strong>Gestión integral:</strong> CRUD completo para crear, editar y eliminar grupos y eventos.</li>
+                    <li><strong>Interacción en eventos:</strong> Los usuarios pueden comentar en los eventos, facilitando la comunicación y el intercambio de opiniones.</li>
+                    <li><strong>Inscripción a eventos:</strong> Permite a los usuarios inscribirse y confirmar su asistencia a los eventos.</li>
+                    <li><strong>Mapas interactivos:</strong> Integración con Leaflet para mostrar ubicaciones precisas mediante pines en mapas dinámicos.</li>
+                    <li><strong>Búsqueda geoespacial:</strong> Utiliza PostGIS para buscar eventos disponibles en un radio específico de la zona deseada.</li>
+                    <li><strong>Gestión de cuentas:</strong> Registro y validación por email, con la posibilidad de editar perfiles y subir un avatar.</li>
+                </ul>
+            `,
+        content: [
+            {
+                type: 'image',
+                data: [
+                    {
+                        name: '1',
+                        description: 'Imagen de la página principal'
+                    },
+                    {
+                        name: '2_1',
+                        description: 'Imagen de la página principal'
+                    },
+                ],
+
+            },
+            // {
+            //     type: 'video',
+            //     data: '1'
+            // }
+        ],
+        technologies: [
+            {
+                name: 'NodeJs',
+                icon: 'nodejs',
+                description: 'con Express.Js para el backend'
+            },
+            {
+                name: 'EJS',
+                icon: 'file-code-regular',
+                description: ',motor de plantillas utilizado para renderizar el frontend de forma dinámica.'
+            },
+            {
+                name: 'JavaScript',
+                icon: 'javascript'
+            },
+            {
+                name: 'PostgresSQL',
+                icon: 'postgres'
+            },
+
+
         ],
         github: 'https://github.com',
     }

@@ -237,6 +237,7 @@ const ProjectPage = () => {
                 index={index}
                 animation={{
                     fade: 200,
+                    swipe: 0
                 }}
                 plugins={[Zoom, Video, Captions]}
                 styles={{

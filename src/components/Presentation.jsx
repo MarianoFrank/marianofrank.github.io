@@ -50,9 +50,8 @@ const Presentation = () => {
         />
 
         <p>
-            Un desarrollador web full stack y estudiante de ingeniería en sistemas
-            Argentino 🇦🇷. Creo soluciones eficientes sin descuidar la estética, me
-            apasiona cada aspecto del desarrollo web 😌🖥️.
+            👨💻 Desarrollador Full Stack | Estudiante de Ingeniería en Sistemas 🇦🇷
+            Estoy buscando activamente una oportunidad laboral donde pueda aportar mis conocimientos en Laravel 🛠️ y React ⚛️, y seguir creciendo como desarrollador. Tengo experiencia construyendo backends robustos y creando interfaces dinámicas. Me interesa formar parte de un equipo donde pueda aprender, desarrollar soluciones escalables y asumir nuevos desafíos 🚀. Listo para trabajar y con muchas ganas de aportar.
         </p>
         <div className="flex gap-2">
             <Button
