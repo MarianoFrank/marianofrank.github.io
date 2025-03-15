@@ -43,17 +43,23 @@ const Contact = () => {
                         primary: "#24292F",
                         secundary: "#3C434A",
                         text: "#fff"
-                    }} />
+                    }}
+                        onClick={() => window.open('https://github.com/MarianoFrank')} url={'https://github.com/MarianoFrank'}
+                    />
 
                     <Button iconFa="fa-brands fa-linkedin" buttonType="custom" colors={{
                         primary: "#0077B5",
                         secundary: "#3399CC",
                         text: "#fff"
-                    }} />
+                    }}
+                        onClick={() => window.open('https://www.linkedin.com/in/frankmariano/')} url={'https://www.linkedin.com/in/frankmariano/'}
+                    />
 
                     <Button iconFa="fa-brands fa-instagram" buttonType="instagram" colors={{
                         text: "#fff"
-                    }} />
+                    }}
+                        onClick={() => window.open('https://www.instagram.com/marian_002/')} url={'https://www.instagram.com/marian_002/'}
+                    />
                 </div>
             </div>
         </section>

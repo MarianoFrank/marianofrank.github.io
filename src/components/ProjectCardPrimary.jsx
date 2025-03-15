@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useDarkMode } from "../context/DarkModeContext";
 import { useNavigate } from "react-router";
 import Technologies from "./Technologies";
+import { useLanguage } from "../context/LanguageContext";
 //Este sera la tarjeta principal de los proyectos, tiene mejor diseño y mas información
 
 /* 
@@ -21,6 +22,8 @@ const ProjectCardPrimary = ({ project, colors, inverted = false }) => {
 
     const [hoverCard, setHoverCard] = useState(false);
 
+    const { t } = useLanguage();
+
     return (
         <div className={`flex mb-10 flex-col md:flex-row justify-betweens gap-4 ${inverted ? "md:flex-row-reverse" : ''}`} onMouseEnter={() => setHoverCard(true)} onMouseLeave={() => setHoverCard(false)}>
             <div
@@ -34,9 +37,9 @@ const ProjectCardPrimary = ({ project, colors, inverted = false }) => {
                     imageName={`/${project.id}/miniature`} />
             </div>
             <div className="grid grid-cols-1 gap-4 min-h-full">
-                <div className="space-y-6">
+                <div className="space-y-4">
                     <h3 className="font-bold text-xl">{`${project.name}`}</h3>
-                    <p>{`${project.resume}`}</p>
+                    <p>{t(project.resume.en, project.resume.es)}</p>
 
                     <Technologies technologies={project.technologies} />
 

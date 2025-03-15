@@ -6,18 +6,21 @@ import ProjectPage from '../views/ProjectPage';
 
 const pageTransition = {
     type: "tween",
-    duration: 0.5,
+    duration: 0.3,
     ease: "easeInOut",
 };
 
 const variants = {
+    //next page, el estado de la pagina a la que se va
     initial: {
         opacity: 0,
     },
+    //current page, el estado de la pagina actual
     animate: {
         transition: pageTransition,
         opacity: 1,
     },
+    //previous page, el estado de la pagina actual al irse
     exit: {
         transition: pageTransition,
         opacity: 0,
@@ -56,7 +59,7 @@ function RoutesWithAnimation() {
 
         <AnimatePresence mode="sync" initial={true}>
 
-            {windowWidth > 1024 && <div className="noise"></div>}
+            {/* {windowWidth > 1024 && <div className="noise"></div>} */}
 
             <Routes location={location} key={location.pathname}>
                 <Route

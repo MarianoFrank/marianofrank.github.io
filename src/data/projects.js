@@ -16,51 +16,33 @@ const projects = [
             light: '#FACC15',
             dark: '#FACC15'
         },
-        resume: 'E-commerce gastronómico con WebSockets para seguimiento de pedidos en tiempo real.',
-        introduction: `
-        <p>FreshCoffee es un e-commerce gastronómico para cafeterías. La plataforma integra un sistema completo de pedidos y administración con las siguientes funcionalidades:</p>
-        <ul class="w-full grid grid-cols-1 gap-4 list-disc pl-8 mb-5 md:w-auto md:mb-0">
-            <li><strong>Sistema de pedidos interactivo:</strong> Carrito de compras dinámico con gestión de estados mediante React Context y useState.</li>
-            <li><strong>Notificaciones en tiempo real:</strong> Feedback visual inmediato para acciones de compra y confirmaciones.</li>
-            <li><strong>Panel administrativo con WebSockets:</strong> Visualización instantánea de pedidos sin recargar la página.</li>
-            <li><strong>Autenticación JWT:</strong> Sistema seguro de registro y login con tokens de acceso y refresco.</li>
-            <li><strong>Gestor de órdenes:</strong> Historial detallado con seguimiento de estados personalizables (en proceso/completado).</li>
-            <li><strong>Dashboard administrativo:</strong> Control centralizado para gestión de productos, usuarios y métricas.</li>
-            <li><strong>Diseño responsive:</strong> Interfaz adaptable a diferentes dispositivos móviles y desktop.</li>
-            <li><strong>Comunicación bidireccional:</strong> Actualizaciones simultáneas entre cliente y administrador mediante WebSockets.</li>
-        </ul>
-        `,
+        resume: {
+            es: 'E-commerce gastronómico con WebSockets para seguimiento de pedidos en tiempo real.',
+            en: 'Gastronomic e-commerce with WebSockets for real-time order tracking.'
+        },
+        introduction: {
+            es: `
+              <p>FreshCoffee es un e-commerce gastronómico para cafeterías. La plataforma integra un sistema completo de pedidos y administración con las siguientes funcionalidades:</p>
+              <ul class="w-full grid grid-cols-1 gap-4 list-disc pl-8 mb-5 md:w-auto md:mb-0">
+                  <li><strong>Sistema de pedidos interactivo:</strong> Carrito de compras dinámico con gestión de estados mediante React Context y useState.</li>
+                  <li><strong>Notificaciones en tiempo real:</strong> Feedback visual inmediato para acciones de compra y confirmaciones.</li>
+                  <li><strong>Panel administrativo con WebSockets:</strong> Visualización instantánea de pedidos sin recargar la página.</li>
+                  <li><strong>Autenticación JWT:</strong> Sistema seguro de registro y login con tokens de acceso.</li>
+                  <li><strong>Dashboard administrativo:</strong> Control centralizado para gestión de productos y pedidos.</li>
+              </ul>
+            `,
+            en: `
+              <p>FreshCoffee is a gastronomic e-commerce platform for coffee shops. The platform integrates a complete ordering and management system with the following functionalities:</p>
+              <ul class="w-full grid grid-cols-1 gap-4 list-disc pl-8 mb-5 md:w-auto md:mb-0">
+                  <li><strong>Interactive ordering system:</strong> Dynamic shopping cart with state management using React Context and useState.</li>
+                  <li><strong>Real-time notifications:</strong> Immediate visual feedback for purchase actions and confirmations.</li>
+                  <li><strong>Admin panel with WebSockets:</strong> Instant order visualization without page reloads.</li>
+                  <li><strong>JWT Authentication:</strong> Secure registration and login system with access tokens.</li>
+                  <li><strong>Administrative dashboard:</strong> Centralized control for product and order management.</li>
+              </ul>
+            `
+        },
         content: [
-            {
-                type: 'image',
-                data: [
-                    {
-                        name: '1',
-                        description: 'Formulario de registro'
-                    },
-                    {
-                        name: '2_1',
-                        description: 'Pagina principal'
-                    },
-                    {
-                        name: '2_2',
-                        description: 'Pagina principal'
-                    },
-                    {
-                        name: '3',
-                        description: 'Ventana modal para agregar productos al carrito'
-                    },
-                    {
-                        name: '4',
-                        description: ' Carrito lleno'
-                    },
-                    {
-                        name: '5',
-                        description: 'Orden enviada'
-                    }
-
-                ],
-            },
             {
                 type: 'video',
                 data: [
@@ -74,26 +56,38 @@ const projects = [
         technologies: [
             {
                 name: 'Laravel',
-                description: 'para la API de backend y servicios de WebSockets',
+                description: {
+                    es: 'para la API de backend y servicios de WebSockets',
+                    en: 'for the backend API and WebSocket services'
+                },
                 icon: 'laravel',
             },
             {
                 name: 'React',
-                description: 'frontend',
+                description: {
+                    es: 'para elfrontend',
+                    en: 'for the frontend'
+                },
                 icon: 'react',
             },
             {
                 name: 'TailwindCSS',
-                description: 'para el diseño y estilos',
+                description: {
+                    es: 'para el diseño y estilos',
+                    en: 'for design and styling'
+                },
                 icon: 'tailwind',
             },
             {
                 name: 'MySQL',
-                description: 'database',
+                description: {
+                    es: 'como base de datos',
+                    en: 'as the database'
+                },
                 icon: 'MySQL',
             }
         ],
-        github: 'https://github.com',
+        github: 'https://github.com/MarianoFrank/freshcoffee-backend',
     },
     {
         id: 'devjobs',
@@ -102,107 +96,80 @@ const projects = [
             light: '#4F46E5',
             dark: '#4F46E5'
         },
-        resume: 'Plataforma de empleos con roles (reclutador/postulante), integración de CVs en PDF y notificaciones.',
-        introduction: `
-        <p>DevJobs es una aplicación de gestión laboral, desarrollada con Laravel, Blade y Livewire. La plataforma ofrece funcionalidades especializadas para ambos roles:</p>
-        <ul class="w-full grid grid-cols-1 gap-4 list-disc pl-8 mb-5 md:w-auto md:mb-0">
-            <li><strong>Panel de reclutadores:</strong> CRUD completo para vacantes, visualización de postulantes y notificaciones por email.</li>
-            <li><strong>Funcionalidades para postulantes:</strong> Búsqueda avanzada con filtros (categoría, salario, nombre) y envío de CV en PDF.</li>
-            <li><strong>Generación de PDFs:</strong> Descarga automática de resúmenes de vacantes y gestión de CVs en formato PDF.</li>
-            <li><strong>Notificaciones bidireccionales:</strong> Alertas en tiempo real para postulaciones y actualizaciones de vacantes.</li>
-            <li><strong>Validaciones robustas:</strong> Control de formatos de archivo (PDF) y validaciones en formularios de registro/postulación.</li>
-            <li><strong>Interfaz dinámica:</strong> Componentes reactivos desarrollados con Livewire y Alpine.js para interacciones fluidas.</li>
-            <li><strong>Autenticación segmentada:</strong> Sistema de registro/login diferenciado para reclutadores y postulantes.</li>
-            <li><strong>Comunicación automatizada:</strong> Envío de correos electrónicos ante nuevas postulaciones o actualizaciones.</li>
-        </ul>
-        `,
-        content: [
-            {
-                type: 'image',
-                data: [
-                    {
-                        name: '1_1',
-                        description: 'Imagen de la página principal'
-                    },
-                    {
-                        name: '1_2',
-                        description: 'Imagen de la página principal'
-                    },
-                    {
-                        name: '1_3',
-                        description: 'Imagen de la página principal'
-                    },
-                    {
-                        name: '3',
-                        description: 'Imagen de la página principal'
-                    },
-                    {
-                        name: '4',
-                        description: 'Imagen de la página principal'
-                    },
-                    {
-                        name: '5',
-                        description: 'Imagen de la página principal'
-                    },
-                    {
-                        name: '6_1',
-                        description: 'Imagen de la página principal'
-                    },
-                    {
-                        name: '6_2',
-                        description: 'Imagen de la página principal'
-                    },
-                    {
-                        name: '6_3',
-                        description: 'Imagen de la página principal'
-                    },
-                    {
-                        name: '6_4',
-                        description: 'Imagen de la página principal'
-                    },
-                    {
-                        name: '7_1',
-                        description: 'Imagen de la página principal'
-                    },
-                    {
-                        name: '7_2',
-                        description: 'Imagen de la página principal'
-                    }
-                ],
-            },
-            // {
-            //     type: 'video',
-            //     data: '1'
-            // }
-        ],
+        resume: {
+            es: 'Plataforma de empleos con roles (reclutador/postulante), integración de CVs en PDF y notificaciones.',
+            en: 'Job platform with roles (recruiter/applicant), PDF CV integration, and notifications.'
+        },
+        introduction: {
+            es: `
+              <p>DevJobs es una aplicación de gestión laboral inspirada en LinkedIn, desarrollada con Laravel, Blade y Livewire. La plataforma ofrece funcionalidades especializadas para ambos roles:</p>
+              <ul class="w-full grid grid-cols-1 gap-4 list-disc pl-8 mb-5 md:w-auto md:mb-0">
+                  <li><strong>Panel de reclutadores:</strong> CRUD completo para vacantes, visualización de postulantes y notificaciones por email.</li>
+                  <li><strong>Funcionalidades para postulantes:</strong> Búsqueda avanzada con filtros (categoría, salario, nombre) y envío de CV en PDF.</li>
+                  <li><strong>Generación de PDFs:</strong> Descarga automática de resúmenes de vacantes y gestión de CVs en formato PDF.</li>
+                  <li><strong>Validaciones robustas:</strong> Control de formatos de archivo (PDF) y validaciones en todos los formularios.</li>
+                  <li><strong>Interfaz dinámica:</strong> Componentes reactivos desarrollados con Livewire y Alpine.js para interacciones fluidas.</li>
+                  <li><strong>Autenticación segmentada:</strong> Sistema de registro/login diferenciado para reclutadores y postulantes.</li>
+                  <li><strong>Notificaciones automaticas:</strong> Envío de correos electrónicos ante nuevas postulaciones.</li>
+              </ul>
+            `,
+            en: `
+              <p>DevJobs is a job management application inspired by LinkedIn, developed with Laravel, Blade, and Livewire. The platform offers specialized functionalities for both roles:</p>
+              <ul class="w-full grid grid-cols-1 gap-4 list-disc pl-8 mb-5 md:w-auto md:mb-0">
+                  <li><strong>Recruiter panel:</strong> Complete CRUD for job postings, applicant visualization, and email notifications.</li>
+                  <li><strong>Applicant features:</strong> Advanced search with filters (category, salary, name) and PDF CV submission.</li>
+                  <li><strong>PDF generation:</strong> Automatic download of job summaries and management of CVs in PDF format.</li>
+                  <li><strong>Robust validations:</strong> File format control (PDF) and validations in all forms.</li>
+                  <li><strong>Dynamic interface:</strong> Reactive components developed with Livewire and Alpine.js for smooth interactions.</li>
+                  <li><strong>Segmented authentication:</strong> Differentiated registration/login system for recruiters and applicants.</li>
+                  <li><strong>Automatic notifications:</strong> Email alerts for new applications.</li>
+              </ul>
+            `
+        },
+        content: [],
         technologies: [
             {
                 name: 'Laravel',
-                description: 'para la API de backend y servicios de WebSockets',
+                description: {
+                    es: 'en el backend',
+                    en: 'in the backend'
+                },
                 icon: 'laravel',
             },
             {
                 name: 'Livewire',
-                description: 'para la interactividad en tiempo real',
+                description: {
+                    es: 'para la interactividad en tiempo real',
+                    en: 'for real-time interactivity'
+                },
                 icon: 'livewire',
             },
             {
                 name: 'AlpineJS',
-                description: 'para la interactividad en tiempo real',
+                description: {
+                    es: 'para la interactividad en tiempo real',
+                    en: 'for real-time interactivity'
+                },
                 icon: 'alpinejs',
             },
             {
                 name: 'TailwindCSS',
-                description: 'para el diseño y estilos',
+                description: {
+                    es: 'para el diseño y estilos',
+                    en: 'for design and styling'
+                },
                 icon: 'tailwind',
             },
             {
                 name: 'MySQL',
-                description: 'database',
+                description: {
+                    es: 'como base de datos',
+                    en: 'as the database'
+                },
                 icon: 'MySQL',
             }
         ],
-        github: 'https://github.com',
+        github: 'https://github.com/MarianoFrank/devjobs-laravel',
     },
     {
         id: 'devstagram',
@@ -211,125 +178,138 @@ const projects = [
             light: '#EEDDD6',
             dark: '#EEDDD6'
         },
-        resume: 'Plataforma social interactiva inspirada en Instagram, que permite a los usuarios compartir fotos e interactuar entre si.',
-        introduction: `
-        <p>Desvstagram es una plataforma social interactiva, inspirada en Instagram, desarrollada con Laravel y Blade. Diseñada para fomentar la conexión y el intercambio visual, esta aplicación permite a los usuarios:</p>
-        <ul class="w-full grid grid-cols-1 gap-4 list-disc  pl-8  mb-5 md:w-auto md:mb-0">
-            <li><strong>Publicar fotos:</strong> Subir imágenes para compartir momentos con la comunidad.</li>
-            <li><strong>Interacción social:</strong> Seguir a otros usuarios, dar "like" a publicaciones y comentar.</li>
-            <li><strong>Feed personalizado:</strong> En la página principal, se muestran las publicaciones de las personas que sigues.</li>
-            <li><strong>Búsqueda de usuarios:</strong> Una funcionalidad para encontrar y conectar con otros perfiles.</li>
-            <li><strong>Cuentas personalizables:</strong> Los usuarios pueden configurar su perfil con una foto personalizada y su nombre.</li>
-            <li><strong>Sistema de autenticación robusto:</strong> Incluye funcionalidades de registro, inicio de sesión y validaciones exhaustivas para garantizar la seguridad y la experiencia del usuario.</li>
-        </ul>
-        `,
-        content: [
-            {
-                type: 'image',
-                data: [
-                    {
-                        name: '1',
-                        description: 'Imagen de la página principal'
-                    },
-                    {
-                        name: '2_1',
-                        description: 'Imagen de la página principal'
-                    },
-                ],
-
-            },
-            // {
-            //     type: 'video',
-            //     data: '1'
-            // }
-        ],
+        resume: {
+            es: 'Plataforma social interactiva inspirada en Instagram, que permite a los usuarios compartir fotos e interactuar entre si.',
+            en: 'Interactive social platform inspired by Instagram, allowing users to share photos and interact with each other.'
+        },
+        introduction: {
+            es: `
+              <p>Devstagram es una plataforma social inspirada en Instagram, desarrollada con Laravel y Blade, esta aplicación permite:</p>
+              <ul class="w-full grid grid-cols-1 gap-4 list-disc pl-8 mb-5 md:w-auto md:mb-0">
+                  <li><strong>Publicar fotos:</strong> Subir imágenes para compartir momentos.</li>
+                  <li><strong>Interacción social:</strong> Seguir a otros usuarios, dar "like" a publicaciones y comentar.</li>
+                  <li><strong>Feed personalizado:</strong> En la página principal, se muestran las publicaciones de las personas que sigues.</li>
+                  <li><strong>Búsqueda de usuarios:</strong> Una funcionalidad para encontrar y conectar con otros perfiles.</li>
+                  <li><strong>Cuentas personalizables:</strong> Los usuarios pueden configurar su perfil con una foto personalizada y su nombre.</li>
+                  <li><strong>Sistema de autenticación robusto:</strong> Incluye funcionalidades de registro, inicio de sesión y validaciones.</li>
+              </ul>
+            `,
+            en: `
+              <p>Devstagram is a social platform inspired by Instagram, developed with Laravel and Blade. This application allows:</p>
+              <ul class="w-full grid grid-cols-1 gap-4 list-disc pl-8 mb-5 md:w-auto md:mb-0">
+                  <li><strong>Photo posting:</strong> Upload images to share moments.</li>
+                  <li><strong>Social interaction:</strong> Follow other users, like posts, and comment.</li>
+                  <li><strong>Personalized feed:</strong> The main page displays posts from people you follow.</li>
+                  <li><strong>User search:</strong> A feature to find and connect with other profiles.</li>
+                  <li><strong>Customizable accounts:</strong> Users can set up their profile with a custom photo and name.</li>
+                  <li><strong>Robust authentication system:</strong> Includes registration, login functionalities, and validations.</li>
+              </ul>
+            `
+        },
+        content: [],
         technologies: [
             {
                 name: 'Laravel',
-                icon: 'laravel',
-                description: 'Used for the backend'
+                description: {
+                    es: 'en el backend',
+                    en: 'in the backend'
+                },
+                icon: 'laravel'
             },
             {
                 name: 'Livewire',
+                description: {
+                    es: 'para la interactividad en tiempo real',
+                    en: 'for real-time interactivity'
+                },
                 icon: 'livewire'
             },
             {
                 name: 'TailwindCSS',
-                description: 'para el diseño y estilos',
+                description: {
+                    es: 'para el diseño y estilos',
+                    en: 'for design and styling'
+                },
                 icon: 'tailwind',
             },
             {
                 name: 'MySQL',
-                description: 'database',
+                description: {
+                    es: 'como base de datos',
+                    en: 'as the database'
+                },
                 icon: 'MySQL',
             }
         ],
-        github: 'https://github.com',
-    }
-    ,
+        github: 'https://github.com/MarianoFrank/Devstagram_Laravel',
+    },
     {
-
         id: 'meeti',
         name: 'Meeti',
         colors: {
             light: '#34D399',
             dark: '#065F46'
         },
-        resume: 'Plataforma inspirada en Meetup que facilita la creación de grupos y eventos con mapas interactivos y búsqueda geoespacial.',
-        introduction: `
-                <p>Meeti es una aplicación inspirada en Meetup, diseñada para que las personas puedan crear grupos y organizar eventos con fechas y horarios específicos.</p>
-                <ul class="w-full grid grid-cols-1 gap-4 list-disc pl-8 mb-5 md:w-auto md:mb-0">
-                    <li><strong>Gestión integral:</strong> CRUD completo para crear, editar y eliminar grupos y eventos.</li>
-                    <li><strong>Interacción en eventos:</strong> Los usuarios pueden comentar en los eventos, facilitando la comunicación y el intercambio de opiniones.</li>
-                    <li><strong>Inscripción a eventos:</strong> Permite a los usuarios inscribirse y confirmar su asistencia a los eventos.</li>
-                    <li><strong>Mapas interactivos:</strong> Integración con Leaflet para mostrar ubicaciones precisas mediante pines en mapas dinámicos.</li>
-                    <li><strong>Búsqueda geoespacial:</strong> Utiliza PostGIS para buscar eventos disponibles en un radio específico de la zona deseada.</li>
-                    <li><strong>Gestión de cuentas:</strong> Registro y validación por email, con la posibilidad de editar perfiles y subir un avatar.</li>
-                </ul>
+        resume: {
+            es: 'Plataforma inspirada en Meetup que facilita la creación de grupos y eventos con mapas interactivos y búsqueda geoespacial.',
+            en: 'Platform inspired by Meetup that facilitates the creation of groups and events with interactive maps and geospatial search.'
+        },
+        introduction: {
+            es: `
+                      <p>Meeti es una aplicación inspirada en Meetup, diseñada para que las personas puedan crear grupos y organizar eventos con fechas y horarios específicos.</p>
+                      <ul class="w-full grid grid-cols-1 gap-4 list-disc pl-8 mb-5 md:w-auto md:mb-0">
+                          <li><strong>Gestión integral:</strong> CRUD completo para crear, editar y eliminar grupos y eventos.</li>
+                          <li><strong>Interacción en eventos:</strong> Los usuarios pueden comentar en los eventos, facilitando la comunicación y el intercambio de opiniones.</li>
+                          <li><strong>Inscripción a eventos:</strong> Permite a los usuarios inscribirse y confirmar su asistencia a los eventos.</li>
+                          <li><strong>Mapas interactivos:</strong> Integración con Leaflet para mostrar ubicaciones precisas mediante pines en mapas dinámicos.</li>
+                          <li><strong>Búsqueda geoespacial:</strong> Utiliza PostGIS para buscar eventos disponibles en un radio específico de la zona deseada.</li>
+                          <li><strong>Gestión de cuentas:</strong> Registro y validación por email, con la posibilidad de editar perfiles y subir un avatar.</li>
+                      </ul>
             `,
-        content: [
-            {
-                type: 'image',
-                data: [
-                    {
-                        name: '1',
-                        description: 'Imagen de la página principal'
-                    },
-                    {
-                        name: '2_1',
-                        description: 'Imagen de la página principal'
-                    },
-                ],
-
-            },
-            // {
-            //     type: 'video',
-            //     data: '1'
-            // }
-        ],
+            en: `
+                      <p>Meeti is an application inspired by Meetup, designed for people to create groups and organize events with specific dates and times.</p>
+                      <ul class="w-full grid grid-cols-1 gap-4 list-disc pl-8 mb-5 md:w-auto md:mb-0">
+                          <li><strong>Comprehensive management:</strong> Full CRUD for creating, editing, and deleting groups and events.</li>
+                          <li><strong>Event interaction:</strong> Users can comment on events, facilitating communication and feedback.</li>
+                          <li><strong>Event registration:</strong> Allows users to sign up and confirm their attendance at events.</li>
+                          <li><strong>Interactive maps:</strong> Integration with Leaflet to display precise locations with pins on dynamic maps.</li>
+                          <li><strong>Geospatial search:</strong> Uses PostGIS to search for events within a specific radius of a desired area.</li>
+                          <li><strong>Account management:</strong> Email registration and validation, with the option to edit profiles and upload an avatar.</li>
+                      </ul>
+            `
+        },
+        content: [],
         technologies: [
             {
                 name: 'NodeJs',
-                icon: 'nodejs',
-                description: 'con Express.Js para el backend'
-            },
-            {
-                name: 'EJS',
-                icon: 'file-code-regular',
-                description: ',motor de plantillas utilizado para renderizar el frontend de forma dinámica.'
+                description: {
+                    es: 'con Express.Js para el backend',
+                    en: 'with Express.js for the backend'
+                },
+                icon: 'nodejs'
             },
             {
                 name: 'JavaScript',
                 icon: 'javascript'
             },
             {
+                name: 'EJS',
+                description: {
+                    es: 'como motor de plantillas para renderizar el frontend de forma dinámica.',
+                    en: 'as a templating engine to dynamically render the frontend.'
+                },
+                icon: 'file-code-regular'
+            },
+            {
                 name: 'PostgresSQL',
+                description: {
+                    es: 'como base de datos, con la extension PostGIS',
+                    en: 'as the database, with the PostGIS extension'
+                },
                 icon: 'postgres'
             },
-
-
         ],
-        github: 'https://github.com',
+        github: 'https://github.com/MarianoFrank/Metti-NodeJS',
     }
 ];
 

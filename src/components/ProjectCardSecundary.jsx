@@ -4,10 +4,13 @@ import { useDarkMode } from '../context/DarkModeContext';
 import { useNavigate } from 'react-router';
 import IconCompound from './IconCompound';
 import Technologies from './Technologies';
+import { useLanguage } from '../context/LanguageContext';
+
 const ProjectCardSecundary = ({ project }) => {
     const { name, resume, technologies } = project;
     const { darkMode } = useDarkMode();
     const navigate = useNavigate();
+    const { t } = useLanguage();
     return (
         <div onClick={() => {
             navigate(`/project/${project.id}`);
@@ -16,7 +19,7 @@ const ProjectCardSecundary = ({ project }) => {
             <IconCompound id="up-right-from-square" className={"absolute right-0 top-0 p-4"} />
 
             <h2 className="text-xl font-bold mb-4">{name}</h2>
-            <p className="text-gray-700 mb-4">{resume}</p>
+            <p className="text-gray-700 mb-4">{t(resume.en, resume.es)}</p>
 
             <Technologies technologies={project.technologies} />
         </div>
