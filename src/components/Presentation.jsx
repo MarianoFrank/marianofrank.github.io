@@ -66,7 +66,7 @@ const Presentation = () => {
                         onClick={handleDownload} icon="file-user" buttonType="special" />
                 </Tooltip>
             </div>
-            <Tooltip content={getCurrentLanguage() === 'en' ? 'es' : 'en'} >
+            <Tooltip content={getCurrentLanguage() === 'en' ? 'ES' : 'EN'} >
                 <Button
                     onClick={toggleLanguage} icon="language" buttonType="normal" />
             </Tooltip>

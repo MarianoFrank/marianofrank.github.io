@@ -1,3 +1,4 @@
+import { techIcons } from "./tech_icons";
 /* NOTAS:
 
 -La imagen siempre debe ser un array aunque sea una solas.
@@ -42,7 +43,7 @@ const projects = [
               </ul>
             `
         },
-        videos: ['freshcoffe_explain_english', 'freshcoffe_explain_spanish'],
+        videos: ['freshcoffe_explain_english_compressed', 'freshcoffe_explain_spanish_compressed'],
         technologies: [
             {
                 name: 'Laravel',
@@ -50,7 +51,7 @@ const projects = [
                     es: 'para la API de backend y servicios de WebSockets',
                     en: 'for the backend API and WebSocket services'
                 },
-                icon: 'laravel',
+                icon: techIcons.laravel
             },
             {
                 name: 'React',
@@ -58,7 +59,7 @@ const projects = [
                     es: 'para elfrontend',
                     en: 'for the frontend'
                 },
-                icon: 'react',
+                icon: techIcons.react,
             },
             {
                 name: 'TailwindCSS',
@@ -66,7 +67,7 @@ const projects = [
                     es: 'para el diseño y estilos',
                     en: 'for design and styling'
                 },
-                icon: 'tailwind',
+                icon: techIcons.tailwind,
             },
             {
                 name: 'MySQL',
@@ -74,7 +75,7 @@ const projects = [
                     es: 'como base de datos',
                     en: 'as the database'
                 },
-                icon: 'MySQL',
+                icon: techIcons.mysql,
             }
         ],
         github: 'https://github.com/MarianoFrank/freshcoffee-backend',
@@ -124,7 +125,7 @@ const projects = [
                     es: 'en el backend',
                     en: 'in the backend'
                 },
-                icon: 'laravel',
+                icon: techIcons.laravel,
             },
             {
                 name: 'Livewire',
@@ -132,7 +133,7 @@ const projects = [
                     es: 'para la interactividad en tiempo real',
                     en: 'for real-time interactivity'
                 },
-                icon: 'livewire',
+                icon: techIcons.livewire,
             },
             {
                 name: 'AlpineJS',
@@ -140,7 +141,7 @@ const projects = [
                     es: 'para la interactividad en tiempo real',
                     en: 'for real-time interactivity'
                 },
-                icon: 'alpinejs',
+                icon: techIcons.alpinejs,
             },
             {
                 name: 'TailwindCSS',
@@ -148,7 +149,7 @@ const projects = [
                     es: 'para el diseño y estilos',
                     en: 'for design and styling'
                 },
-                icon: 'tailwind',
+                icon: techIcons.tailwind,
             },
             {
                 name: 'MySQL',
@@ -156,7 +157,7 @@ const projects = [
                     es: 'como base de datos',
                     en: 'as the database'
                 },
-                icon: 'MySQL',
+                icon: techIcons.mysql,
             }
         ],
         github: 'https://github.com/MarianoFrank/devjobs-laravel',
@@ -204,7 +205,7 @@ const projects = [
                     es: 'en el backend',
                     en: 'in the backend'
                 },
-                icon: 'laravel'
+                icon: techIcons.laravel,
             },
             {
                 name: 'Livewire',
@@ -212,7 +213,7 @@ const projects = [
                     es: 'para la interactividad en tiempo real',
                     en: 'for real-time interactivity'
                 },
-                icon: 'livewire'
+                icon: techIcons.livewire,
             },
             {
                 name: 'TailwindCSS',
@@ -220,7 +221,7 @@ const projects = [
                     es: 'para el diseño y estilos',
                     en: 'for design and styling'
                 },
-                icon: 'tailwind',
+                icon: techIcons.tailwind,
             },
             {
                 name: 'MySQL',
@@ -228,7 +229,7 @@ const projects = [
                     es: 'como base de datos',
                     en: 'as the database'
                 },
-                icon: 'MySQL',
+                icon: techIcons.mysql,
             }
         ],
         github: 'https://github.com/MarianoFrank/Devstagram_Laravel',
@@ -276,11 +277,11 @@ const projects = [
                     es: 'con Express.Js para el backend',
                     en: 'with Express.js for the backend'
                 },
-                icon: 'nodejs'
+                icon: techIcons.nodejs,
             },
             {
                 name: 'JavaScript',
-                icon: 'javascript'
+                icon: techIcons.javascript,
             },
             {
                 name: 'EJS',
@@ -288,7 +289,7 @@ const projects = [
                     es: 'como motor de plantillas para renderizar el frontend de forma dinámica.',
                     en: 'as a templating engine to dynamically render the frontend.'
                 },
-                icon: 'file-code-regular'
+                icon: techIcons.file_code,
             },
             {
                 name: 'PostgresSQL',
@@ -296,7 +297,7 @@ const projects = [
                     es: 'como base de datos, con la extension PostGIS',
                     en: 'as the database, with the PostGIS extension'
                 },
-                icon: 'postgres'
+                icon: techIcons.postgres,
             },
         ],
         github: 'https://github.com/MarianoFrank/Metti-NodeJS',

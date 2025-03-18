@@ -23,7 +23,7 @@ const Button = forwardRef(
             if (onClick) onClick();
             setTimeout(() => {
                 setIsClicked(false);
-            }, 200);
+            }, 180);
         };
 
         const { primaryColor, secundaryColor } = useColor(buttonType, colors);
@@ -32,12 +32,12 @@ const Button = forwardRef(
         return (
 
             <a href={url} onClick={(e) => e.preventDefault()}>
-                <div className="relative shadow-md rounded-lg block w-fit">
+                <div className="relative rounded-lg block w-fit">
                     <button
                         ref={ref}
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
-                        className={`transition-transform duration-100 ease-in-out  ${isClicked ? "translate-y-[0.2rem] " : ``}   min-w-10 min-h-10 text-sm font-bold relative z-10 cursor-pointer border-2 rounded-lg p-2 flex items-center justify-center transition-transform-shadow `}
+                        className={`${isClicked ? "translate-y-[0.2rem] " : ``} min-w-10 min-h-10 text-sm font-bold relative z-10 cursor-pointer border-2 rounded-lg p-2 flex items-center justify-center `}
                         onClick={handleClick}
 
                         style={
@@ -47,7 +47,8 @@ const Button = forwardRef(
                                 borderColor: primaryColor,
                                 color: colors && colors.text ? colors.text : primaryColor,
                                 //Ya vere si le dejo esto, no me convence
-                                //boxShadow: isHovered ? `0 0 4px 0 ${primaryColor}` : "none",
+                                // boxShadow: isHovered ? `0 0 2px 0px ${primaryColor}` : "none",
+                                transition: 'transform 0.1s ease'//, box-shadow 0.2s ease'
                             }
                         }
                         {...rest}
@@ -69,10 +70,11 @@ const Button = forwardRef(
                         style={
                             {
                                 backgroundColor: primaryColor,
+                                //boxShadow: isHovered ? `0 0 2px 0px ${primaryColor}` : "none",
                             }
                         } />
                 </div >
-            </a>
+            </a >
         );
     }
 );

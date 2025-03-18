@@ -49,7 +49,7 @@ const ProjectPage = () => {
                         <div className='flex gap-2'>
                             <Button onClick={() => navigate("/")} icon="arrow-left" text={t("Back", "Volver")} buttonType="normal" invertIcon={true} />
                             <Button onClick={toggleDarkMode} icon="moon-over-sun" buttonType="normal" />
-                            <Tooltip content={getCurrentLanguage() === 'en' ? 'es' : 'en'} >
+                            <Tooltip content={getCurrentLanguage() === 'en' ? 'ES' : 'EN'} >
                                 <Button
                                     onClick={toggleLanguage} icon="language" buttonType="normal" />
                             </Tooltip>
@@ -72,7 +72,7 @@ const ProjectPage = () => {
                             return (
                                 <li key={index} className='w-full'>
                                     <div className="flex items-start gap-x-2">
-                                        <img src={`/icons/technologies/${tech.icon}.svg`} alt={tech.name} type="svg" loading='lazy' className='h-4 w-4' />
+                                        <p dangerouslySetInnerHTML={{ __html: darkMode ? tech.icon.dark : tech.icon.light }} className='text-md'></p>
                                         <p>
                                             {` ${tech.name} `}
                                             {tech.description ? `${t(tech.description.en, tech.description.es)}` : ""}
@@ -99,14 +99,14 @@ const ProjectPage = () => {
                             .map((video) => {
                                 return (
                                     <video
-                                        className="w-full h-full rounded-xl"
+                                        className='shadow-none w-fit h-fit overflow-hidden rounded-xl border border-opacity-50 border-gray-800 '
                                         controls
                                         controlsList="nodownload noremoteplayback"
                                         preload="auto"
                                         poster={`/media/${project.id}/poster.jpg`}
                                         key={video}
                                     >
-                                        <source src={`/media/${project.id}/${video}.mp4`} type="video/mp4" />
+                                        <source src={`/media/${project.id}/${video}.mp4`} type="video/mp4" className='border-none' />
                                         {t("Your browser does not support the video tag", "Tu navegador no soporta la etiqueta de video")}
                                     </video>
                                 );
