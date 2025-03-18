@@ -12,8 +12,8 @@ const useColor = (type = "normal", colors) => {
         let primaryColor, secundaryColor;
         if (type === "normal") {
             primaryColor = isDarkMode
-                ? pallete.darkMode.foreground
-                : pallete.lightMode.foreground;
+                ? pallete.darkMode.text
+                : pallete.lightMode.text;
 
             secundaryColor = isDarkMode
                 ? pallete.darkMode.bg
@@ -30,17 +30,12 @@ const useColor = (type = "normal", colors) => {
         else if (type === "custom") {
 
             primaryColor = isDarkMode
-                ? colors.primary
-                : colors.secundary;
+                ? colors.darkMode.primary
+                : colors.lightMode.primary;
 
             secundaryColor = isDarkMode
-                ? colors.secundary
-                : colors.primary;
-        }
-        else if (type === "instagram") {
-            //caso especial 
-            primaryColor = isDarkMode ? "#E669B6" : "#cc32b2";
-            secundaryColor = "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)";
+                ? colors.darkMode.primary_light
+                : colors.lightMode.primary_light;
 
         }
 

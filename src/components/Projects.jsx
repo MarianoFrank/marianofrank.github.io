@@ -5,11 +5,14 @@ import projects from "../data/projects";
 import SectionHeader from "./SectionHeader";
 import ProjectCardPrimary from "./ProjectCardPrimary";
 import ProjectCardSecundary from "./ProjectCardSecundary";
+import { useLanguage } from "../context/LanguageContext";
 
-const Projects = () => (
+const Projects = () => {
 
-    <section className="tiny-content">
-        <SectionHeader text="Proyectos" icon="folder-open" />
+    const { t } = useLanguage();
+
+    return (<section className="tiny-content">
+        <SectionHeader text={t("Proyects", "Proyectos")} icon="folder-open" />
 
         <div className="space-y-10">
             <div className="space-y-6">
@@ -41,6 +44,7 @@ const Projects = () => (
         </div>
 
     </section>
-);
+    );
+};
 
 export default Projects;

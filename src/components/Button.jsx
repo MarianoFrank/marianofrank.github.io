@@ -37,7 +37,7 @@ const Button = forwardRef(
                         ref={ref}
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
-                        className={`transition-all duration-100 ease-in-out  ${isClicked ? "translate-y-[0.2rem] " : ``}   min-w-10 min-h-10 text-sm font-bold relative z-10 cursor-pointer border-2 rounded-lg p-2 flex items-center justify-center transition-transform-shadow `}
+                        className={`transition-transform duration-100 ease-in-out  ${isClicked ? "translate-y-[0.2rem] " : ``}   min-w-10 min-h-10 text-sm font-bold relative z-10 cursor-pointer border-2 rounded-lg p-2 flex items-center justify-center transition-transform-shadow `}
                         onClick={handleClick}
 
                         style={

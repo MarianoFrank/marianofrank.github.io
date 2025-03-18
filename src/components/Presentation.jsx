@@ -25,7 +25,7 @@ const Presentation = () => {
 
         <ReactTypingEffect
             className="m-0 p-0"
-            text={["soy Mariano", "Bienvenido", ":D"]}
+            text={[t("i'm Mariano", "soy Mariano"), t("welcome", "bienvenido"), ":D"]}
             cursorRenderer={cursor => <h1 className="m-0 p-0">{cursor}</h1>}
             speed={200}
             eraseDelay={600}
@@ -35,7 +35,7 @@ const Presentation = () => {
             displayTextRenderer={(text, i) => {
                 return (
                     <h1 className="m-0 p-0 font-extrabold">
-                        Hola, {' '}
+                        {t("Hi", "Hola")}, {' '}
                         {text.split('').map((char, i) => {
                             const key = `${i}`;
                             return (
@@ -52,8 +52,8 @@ const Presentation = () => {
         />
 
         <p>
-            {t("👨💻 Full Stack Developer | Systems Engineering student 🇦🇷 I'm actively looking for a job opportunity where I can contribute my knowledge in Laravel 🛠️ and React ⚛️, and continue growing as a developer. I have experience building robust backends and creating dynamic interfaces. I am interested in being part of a team where I can learn, develop scalable solutions, and take on new challenges 🚀. Ready to work and eager to contribute.",
-                "👨💻 Desarrollador Full Stack | Estudiante de Ingeniería en Sistemas 🇦🇷 Estoy buscando activamente una oportunidad laboral donde pueda aportar mis conocimientos en Laravel 🛠️ y React ⚛️, y seguir creciendo como desarrollador. Tengo experiencia construyendo backends robustos y creando interfaces dinámicas. Me interesa formar parte de un equipo donde pueda aprender, desarrollar soluciones escalables y asumir nuevos desafíos 🚀. Listo para trabajar y con muchas ganas de aportar.")}
+            {t("👨💻 Full Stack Developer & Systems Engineering student Argentine 🇦🇷 I'm actively looking for a job opportunity where I can contribute my knowledge in Laravel 🛠️ and React ⚛️, and continue growing as a developer. I have experience building robust backends and creating dynamic interfaces. I am interested in being part of a team where I can learn, develop scalable solutions, and take on new challenges 🚀. Ready to work and eager to contribute.",
+                "👨💻 Desarrollador Full Stack | Estudiante de Ingeniería en Sistemas de Argentina 🇦🇷 Estoy buscando activamente una oportunidad laboral donde pueda aportar mis conocimientos en Laravel 🛠️ y React ⚛️, y seguir creciendo como desarrollador. Tengo experiencia construyendo backends robustos y creando interfaces dinámicas. Me interesa formar parte de un equipo donde pueda aprender, desarrollar soluciones escalables y asumir nuevos desafíos 🚀. Listo para trabajar y con muchas ganas de aportar.")}
         </p>
 
 
@@ -61,8 +61,8 @@ const Presentation = () => {
             <div className="flex gap-2">
                 <Button
                     onClick={toggleDarkMode} icon="moon-over-sun" buttonType="normal" />
-                <Tooltip content="Descargar 💾" >
-                    <Button text="Curriculum"
+                <Tooltip content={t("Download 💾", "Descargar 💾")} >
+                    <Button text={t("Resume", "Currículum")}
                         onClick={handleDownload} icon="file-user" buttonType="special" />
                 </Tooltip>
             </div>

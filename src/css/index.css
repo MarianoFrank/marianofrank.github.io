@@ -3,20 +3,33 @@
 @tailwind utilities;
 
 @layer base {
-  p {
+
+  p, h1, h2, h3, a, span, li, ul {
     @apply text-lightMode-text; /* Estilo para el modo claro */
-    font-weight: 400;
   }
 
   /* Estilos para el modo oscuro */
-  .dark p {
-    @apply text-darkMode-text; /* Color de texto blanco en modo oscuro */
+  .dark p,
+  .dark h1,
+  .dark h2,
+  .dark h3,
+  .dark a,
+  .dark span,
+  .dark li,
+  .dark ul {
+    @apply text-darkMode-text; /* Color de texto para modo oscuro */
+  }
+
+  p, h1, h2, h3, a, span, li, ul {
+    @apply tracking-normal leading-normal; /* Estilo para el modo claro */
   }
 }
 
+
+
 /* Personalización de la barra de desplazamiento */
 ::-webkit-scrollbar {
-  width: 8px; /* Ancho de la barra de desplazamiento */
+  width: 4px; /* Ancho de la barra de desplazamiento */
 }
 
 ::-webkit-scrollbar-thumb {
@@ -29,7 +42,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #eff1f5; /* Color de la pista de la barra de desplazamiento */
+  background-color: #fff; /* Color de la pista de la barra de desplazamiento */
   border-radius: 4px;
 }
 
@@ -43,7 +56,7 @@
 }
 
 .dark ::-webkit-scrollbar-track {
-  background-color: #1e1e2e; /* Color de la pista en modo oscuro */
+  background-color: #09090B; /* Color de la pista en modo oscuro */
 }
 
 .noise {

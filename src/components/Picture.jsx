@@ -1,5 +1,5 @@
 const getImageSrcSet = (imageName) => {
-    const base = `/images`;
+    const base = `/media`;
     return {
         avif: `${base}${imageName}.avif`,
         webp: `${base}${imageName}.webp`,

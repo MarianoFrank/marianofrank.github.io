@@ -13,8 +13,8 @@ const projects = [
         id: 'freshcoffe',
         name: 'FreshCoffe',
         colors: {
-            light: '#FACC15',
-            dark: '#FACC15'
+            light: '#e5c890',
+            dark: '#f9e2af'
         },
         resume: {
             es: 'E-commerce gastronómico con WebSockets para seguimiento de pedidos en tiempo real.',
@@ -42,17 +42,7 @@ const projects = [
               </ul>
             `
         },
-        content: [
-            {
-                type: 'video',
-                data: [
-                    {
-                        name: '6',
-                        description: 'Demostración de la funcionalidad de WebSockets'
-                    }
-                ],
-            }
-        ],
+        videos: ['freshcoffe_explain_english', 'freshcoffe_explain_spanish'],
         technologies: [
             {
                 name: 'Laravel',
@@ -93,8 +83,8 @@ const projects = [
         id: 'devjobs',
         name: 'DevJobs',
         colors: {
-            light: '#4F46E5',
-            dark: '#4F46E5'
+            light: '#babbf1',
+            dark: '#b4befe'
         },
         resume: {
             es: 'Plataforma de empleos con roles (reclutador/postulante), integración de CVs en PDF y notificaciones.',
