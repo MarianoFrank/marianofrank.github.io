@@ -99,7 +99,7 @@ const ProjectPage = () => {
                             .map((video) => {
                                 return (
                                     <video
-                                        className='shadow-none w-fit h-fit overflow-hidden rounded-xl border border-opacity-50 border-gray-800 '
+                                        className='shadow-none w-fit h-fit overflow-hidden rounded-xl border-2 border-opacity-20 border-darkMode-primary_light dark:border-opacity-20'
                                         controls
                                         controlsList="nodownload noremoteplayback"
                                         preload="auto"

@@ -7,6 +7,8 @@ import { techIcons } from "./tech_icons";
     -Imagenes y videos: 1600x900 
     -Miniaturas: 640x360
 
+El unico color que no respeto de la paleta catppuccin Latte es el amarillo en su lugar uso el de Frappé
+esto para toda la aplicacion
  */
 
 const projects = [
@@ -15,7 +17,7 @@ const projects = [
         name: 'FreshCoffe',
         colors: {
             light: '#e5c890',
-            dark: '#f9e2af'
+            dark: ' #f9e2af'
         },
         resume: {
             es: 'E-commerce gastronómico con WebSockets para seguimiento de pedidos en tiempo real.',
@@ -84,7 +86,7 @@ const projects = [
         id: 'devjobs',
         name: 'DevJobs',
         colors: {
-            light: '#babbf1',
+            light: '#7287fd',
             dark: '#b4befe'
         },
         resume: {

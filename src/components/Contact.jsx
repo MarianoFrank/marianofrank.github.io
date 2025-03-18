@@ -48,12 +48,12 @@ const Contact = () => {
                         buttonType="custom"
                         colors={{
                             lightMode: {
-                                primary: "#24292F",
-                                primary_light: "#3C434A"
+                                primary: "#4c4f69",
+                                primary_light: "#232634"
                             },
                             darkMode: {
-                                primary: "#3C434A",
-                                primary_light: "#24292F"
+                                primary: "#c6d0f5",
+                                primary_light: "#232634"
                             },
                             text: "#fff"
                         }}
@@ -66,12 +66,12 @@ const Contact = () => {
                         buttonType="custom"
                         colors={{
                             lightMode: {
-                                primary: "#0077B5",
-                                primary_light: "#3399CC"
+                                primary: "#7287fd",
+                                primary_light: "#1e66f5"
                             },
                             darkMode: {
-                                primary: "#3399CC",
-                                primary_light: "#0077B5"
+                                primary: "#babbf1",
+                                primary_light: "#1e66f5 "
                             },
                             text: "#fff"
                         }}
@@ -84,12 +84,12 @@ const Contact = () => {
                         buttonType="custom"
                         colors={{
                             lightMode: {
-                                primary: "#cc32b2", // Catppuccin Latte 'pink'
-                                primary_light: "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)"
+                                primary: "#ea76cb",
+                                primary_light: "radial-gradient(circle at 30% 107%, #e5c890 0%, #e5c890 5%, #e78284 45%,#ea76cb 60%,#1e66f5 90%)"
                             },
                             darkMode: {
-                                primary: "#E669B6", // Catppuccin Mocha 'pink'
-                                primary_light: "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)"
+                                primary: "#f4b8e4",
+                                primary_light: "radial-gradient(circle at 30% 107%, #e5c890 0%, #e5c890 5%, #e78284 45%,#ea76cb 60%,#1e66f5 90%)"
                             },
                             text: "#fff"
                         }}
